@@ -35,7 +35,6 @@ ASK SDK for Node.js
 
 The ASK SDK v2 for Node.js makes it easier for you to build highly engaging skills by allowing you to spend more time implementing features and less time writing boilerplate code.
 
-
 Alexa Features Supported by SDK
 ===================================
 
@@ -61,7 +60,7 @@ This section provides all the Alexa features that are currently supported in the
 
 * `Lists <https://developer.amazon.com/docs/custom-skills/access-the-alexa-shopping-and-to-do-lists.html#alexa-lists-access>`__
 
-* `Request for customer contact information <https://developer.amazon.com/docs/smapi/alexa-settings-api-reference.html>`__
+* `Request for customer contact information <https://developer.amazon.com/docs/custom-skills/request-customer-contact-information-for-use-in-your-skill.html>`__
 
 * `Obtain customer settings information <https://developer.amazon.com/docs/smapi/alexa-settings-api-reference.html>`_
 
@@ -71,15 +70,20 @@ This section provides all the Alexa features that are currently supported in the
 
 * `Dialog Management <https://developer.amazon.com/docs/custom-skills/dialog-interface-reference.html>`__
 
+* `Location Services <https://developer.amazon.com/docs/custom-skills/location-services-for-alexa-skills.html>`__
+
+* `Reminders <https://developer.amazon.com/docs/smapi/alexa-reminders-overview.html>`__
+
 Preview Features
 ----------------
 
 .. note::
 
-    The following featrures are released as public preview. The interfaces might change in future releases.
+   The following featrures are released as public preview. The interfaces might change in future releases.
 
 * `Connections <https://developer.amazon.com/blogs/alexa/post/7b332b32-893e-4cad-be07-a5877efcbbb4/skill-connections-preview-now-skills-can-work-together-to-help-customers-get-more-done>`__
 * `Alexa Presentation Language <https://developer.amazon.com/docs/alexa-presentation-language/apl-overview.html>`__
+* `Name-free Interactions <https://developer.amazon.com/docs/custom-skills/understand-name-free-interaction-for-custom-skills.html>`_
 
 Guide
 =====

@@ -334,20 +334,11 @@ The ASK SDK for Node.js provides a ``MonetizationServiceClient`` that invokes `i
    getInSkillProducts(locale : string, purchasable? : string, entitled? : string, productType? : string, nextToken? : string, maxResults? : number) : Promise<services.monetization.InSkillProductsResponse>
    getInSkillProduct(locale : string, productId : string) : Promise<services.monetization.InSkillProduct>
 
--  ``locale`` can be retrieved from the request at
-   ``handlerInput.requestEnvelope.request.locale``.
--  ``purchasable`` can be provided as ``null`` to retrieve all in-skill
-   products and as ``PURCHASABLE`` or ``NOT_PURCHASABLE`` to filter the
-   response on purchasability.
--  ``productType`` can be provided as ``null`` to retrieve in-skill
-   products of all types or as ``ENTITLEMENT``, ``CONSUMABLE`` or
-   ``SUBSCRIPTION`` to filter by product type.
--  ``entitled`` can be provided as ``null`` to retrieve all in-skill
-   products and as ``ENTITLED`` or ``NOT_ENTITLED`` to filter the
-   response on entitlement status.
--  ``nextToken`` is required for paginated queries. ``maxResults``
-   allows skills to control records retrieved per API call. The default
-   page size is 100 records.
+-  ``locale`` can be retrieved from the request at ``handlerInput.requestEnvelope.request.locale``.
+-  ``purchasable`` can be provided as ``null`` to retrieve all in-skill products and as ``PURCHASABLE`` or ``NOT_PURCHASABLE`` to filter the response on purchasability.
+-  ``productType`` can be provided as ``null`` to retrieve in-skill products of all types or as ``ENTITLEMENT``, ``CONSUMABLE`` or ``SUBSCRIPTION`` to filter by product type.
+-  ``entitled`` can be provided as ``null`` to retrieve all in-skill products and as ``ENTITLED`` or ``NOT_ENTITLED`` to filter the response on entitlement status.
+-  ``nextToken`` is required for paginated queries. ``maxResults`` allows skills to control records retrieved per API call. The default page size is 100 records.
 -  ``productId`` specifies the in-skill product to be retrieved.
 
 getInSkillProducts
@@ -591,3 +582,22 @@ Type Definition
     getSystemTemperatureUnit(deviceId: string): Promise<services.ups.TemperatureUnit>;
     getSystemTimeZone(deviceId: string): Promise<string>;
   }
+
+ReminderManagementServiceClient
+===============================
+
+``ReminderManagementServiceClient`` can be used to query `Alexa Reminders API <https://developer.amazon.com/docs/smapi/alexa-reminders-api-reference.html>`_ to create and manage reminders from your skill.
+
+Type Definition
+---------------
+
+.. code-block:: typescript
+
+    class ReminderManagementServiceClient extends BaseServiceClient {
+      deleteReminder(alertToken: string): Promise<void>;
+      getReminder(alertToken: string): Promise<services.reminderManagement.GetReminderResponse>;
+      updateReminder(alertToken: string, reminderRequest: services.reminderManagement.ReminderRequest): Promise<services.reminderManagement.ReminderResponse>;
+      deleteReminders(): Promise<void>;
+      getReminders(): Promise<services.reminderManagement.GetRemindersResponse>;
+      createReminder(reminderRequest: services.reminderManagement.ReminderRequest): Promise<services.reminderManagement.ReminderResponse>;
+    }
